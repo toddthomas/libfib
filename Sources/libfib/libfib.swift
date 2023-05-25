@@ -6,12 +6,12 @@
 public func fib(_ n: UInt) -> UInt {
     if n == 0 { return n }
 
-    var last: UInt = 0
-    var next: UInt = 1
+    var penultimate: UInt = 0
+    var ultimate: UInt = 1
 
     for _ in 1..<n {
-        (last, next) = (next, last + next)
+        (penultimate, ultimate) = (ultimate, penultimate + ultimate)
     }
 
-    return next
+    return ultimate
 }
